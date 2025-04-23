@@ -29,3 +29,9 @@ yarn-error.log*
 # OS files
 .DS_Store
 Thumbs.db
+
+# Large files
+images/EDUSITY.png
+images/user-image*.png
+images/CV*.pdf
+images/content.pdf
