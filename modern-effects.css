@@ -1,0 +1,216 @@
+/* Modern Effects CSS for Portfolio Website */
+
+/* Glassmorphism effects */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.dark .glass-effect {
+    background: rgba(17, 0, 31, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Gradient animations */
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.gradient-animation {
+    background: linear-gradient(-45deg, #4CAF50, #2196F3, #9C27B0, #00BCD4);
+    background-size: 400% 400%;
+    animation: gradient-shift 15s ease infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Typewriter cursor blink animation */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #3B82F6; }
+}
+
+/* 3D button effect */
+.button-3d {
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.button-3d:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+/* Glow effect */
+.glow-on-hover {
+    transition: all 0.3s ease;
+}
+
+.glow-on-hover:hover {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.8);
+}
+
+.dark .glow-on-hover:hover {
+    box-shadow: 0 0 15px rgba(147, 51, 234, 0.8);
+}
+
+/* Reveal animation */
+@keyframes reveal {
+    from { 
+        clip-path: inset(0 100% 0 0); 
+    }
+    to { 
+        clip-path: inset(0 0 0 0); 
+    }
+}
+
+.reveal-text {
+    animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+/* Parallax container */
+.parallax-container {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Tilt effect for cards */
+.tilt-card {
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+/* Shine effect overlay */
+.shine-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+}
+
+.shine-container:hover .shine-overlay {
+    transform: translateX(100%);
+}
+
+/* Morphing background */
+@keyframes morphBackground {
+    0% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+    }
+    100% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    }
+}
+
+.morph-bg {
+    animation: morphBackground 8s ease-in-out infinite;
+}
+
+/* Scroll progress indicator */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(to right, #4CAF50, #2196F3);
+    z-index: 9999;
+    transition: width 0.1s;
+}
+
+/* Neon text effect */
+.neon-text {
+    text-shadow: 0 0 5px rgba(59, 130, 246, 0.5), 
+                 0 0 10px rgba(59, 130, 246, 0.3), 
+                 0 0 15px rgba(59, 130, 246, 0.2);
+}
+
+.dark .neon-text {
+    text-shadow: 0 0 5px rgba(147, 51, 234, 0.5), 
+                 0 0 10px rgba(147, 51, 234, 0.3), 
+                 0 0 15px rgba(147, 51, 234, 0.2);
+}
+
+/* Frosted glass card */
+.frosted-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+}
+
+.dark .frosted-card {
+    background: rgba(17, 0, 31, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Animated border */
+@keyframes border-pulse {
+    0% { border-color: rgba(59, 130, 246, 0.3); }
+    50% { border-color: rgba(59, 130, 246, 1); }
+    100% { border-color: rgba(59, 130, 246, 0.3); }
+}
+
+.animated-border {
+    border: 2px solid rgba(59, 130, 246, 0.3);
+    animation: border-pulse 2s infinite;
+}
+
+/* Smooth scrollbar for webkit browsers */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.dark ::-webkit-scrollbar-track {
+    background: #2a004a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3B82F6;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1D4ED8;
+}
+
+/* Apply these classes to existing elements */
+#services .grid > div, #work .grid > a {
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+#about img:first-of-type {
+    position: relative;
+}
+
+/* Add scroll progress indicator */
+.scroll-progress {
+    width: 0;
+}

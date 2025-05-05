@@ -1,0 +1,111 @@
+/* Framer Motion animation styles */
+
+/* Initial state - invisible and translated down with slight rotation */
+.animate-ready {
+  opacity: 0;
+  transform: translateY(30px) rotate(2deg);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Animated state - visible and in position */
+.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Fade in from left animation */
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Fade in from right animation */
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Scale up animation */
+.scale-up {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.7s ease-out, transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Animated states */
+.fade-in-left.animate-in,
+.fade-in-right.animate-in,
+.scale-up.animate-in {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+/* Add staggered transition delays based on index */
+#services .grid > div:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+#services .grid > div:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+#services .grid > div:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+#services .grid > div:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+/* Project card staggered delays */
+#work .grid > a:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+#work .grid > a:nth-child(2) {
+  transition-delay: 0.25s;
+}
+
+#work .grid > a:nth-child(3) {
+  transition-delay: 0.4s;
+}
+
+#work .grid > a:nth-child(4) {
+  transition-delay: 0.55s;
+}
+
+/* Hero section animation */
+.hero-animate {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.hero-animate.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Contact form animation */
+#contact form input,
+#contact form textarea {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure animations don't interfere with hover effects */
+#services .grid > div {
+  transition: opacity 0.6s ease-out, transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.5s, background-color 0.5s, translate 0.5s;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
