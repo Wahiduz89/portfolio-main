@@ -1,0 +1,220 @@
+/* Contact Section Animations */
+.contact-form-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.08);
+    transition: all 0.5s ease;
+}
+
+.contact-form-container:hover {
+    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.15);
+}
+
+.contact-form-container::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 180px;
+    height: 180px;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.25) 0%, rgba(99, 102, 241, 0) 70%);
+    border-radius: 50%;
+    z-index: -1;
+    animation: float-bubble 15s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.contact-form-container::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    right: -80px;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, rgba(139, 92, 246, 0) 70%);
+    border-radius: 50%;
+    z-index: -1;
+    animation: float-bubble 18s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95) reverse;
+}
+
+@keyframes float-bubble {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(20px, 15px); }
+    50% { transform: translate(0, 30px); }
+    75% { transform: translate(-20px, 15px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Form Element Animations */
+.form-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+    filter: blur(2px);
+}
+
+.form-element.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+
+.form-element:nth-child(1) { transition-delay: 0.1s; }
+.form-element:nth-child(2) { transition-delay: 0.2s; }
+.form-element:nth-child(3) { transition-delay: 0.3s; }
+.form-element:nth-child(4) { transition-delay: 0.4s; }
+
+/* Form Input Focus Effects */
+input[type="text"], input[type="email"], textarea {
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0 rgba(99, 102, 241, 0);
+}
+
+input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    border-color: #6366F1 !important;
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Submit Button Animation */
+.submit-btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 6px rgba(99, 102, 241, 0.1);
+}
+
+.submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: all 0.5s ease;
+}
+
+.submit-btn:hover {
+    box-shadow: 0 6px 12px rgba(99, 102, 241, 0.2);
+    transform: translateY(-3px) scale(1.05);
+}
+
+.submit-btn:hover::before {
+    left: 100%;
+}
+
+/* GitHub Link Animation */
+.github-link {
+    position: relative;
+    padding: 8px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: rgba(99, 102, 241, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.github-link:hover {
+    background-color: rgba(99, 102, 241, 0.2);
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+}
+
+.github-link .social-icon {
+    transition: all 0.3s ease;
+    transform-origin: center;
+    color: #6366F1;
+}
+
+.github-link:hover .social-icon {
+    transform: rotate(360deg);
+    filter: brightness(1.2);
+}
+
+/* Footer Animation */
+.footer-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-wave {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" fill="%236366F1"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" fill="%236366F1"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%236366F1"/></svg>');
+    background-size: cover;
+    animation: wave-animation 10s linear infinite;
+}
+
+@keyframes wave-animation {
+    0% { background-position-x: 0; }
+    100% { background-position-x: 1000px; }
+}
+
+/* Email container animation */
+.email-container {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 30px;
+    background-color: rgba(99, 102, 241, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.email-container:hover {
+    background-color: rgba(99, 102, 241, 0.2);
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+    transform: translateY(-3px);
+}
+
+.email-container .social-icon {
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.email-container:hover .social-icon {
+    transform: rotate(20deg);
+}
+
+/* Footer links animation */
+.footer-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.footer-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #6366F1;
+    transition: width 0.3s ease;
+}
+
+.footer-link:hover::after {
+    width: 100%;
+}
+
+/* Copyright text animation */
+.copyright-text {
+    position: relative;
+    overflow: hidden;
+}
+
+.copyright-text::before {
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.5), transparent);
+    animation: slide-line 3s infinite;
+}
+
+@keyframes slide-line {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}

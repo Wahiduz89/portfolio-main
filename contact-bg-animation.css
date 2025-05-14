@@ -1,0 +1,67 @@
+/* Contact Background Animation Effects */
+
+/* Animated background gradient for contact section */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.contact-form-container {
+    position: relative;
+}
+
+/* Add subtle animated dots in the background */
+.contact-form-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle, rgba(99, 102, 241, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.5;
+    z-index: -1;
+    animation: dotAnimation 15s infinite linear;
+}
+
+@keyframes dotAnimation {
+    0% { background-position: 0px 0px; }
+    100% { background-position: 20px 20px; }
+}
+
+/* Glowing effect for submit button */
+.submit-btn {
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0);
+    transition: box-shadow 0.3s ease;
+}
+
+.submit-btn:hover {
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+}
+
+/* Subtle input field animation on focus */
+.form-element:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Social icon pulse effect */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.social-icon:hover {
+    animation: pulse 1s infinite;
+    color: #6366F1;
+}
+
+/* Footer wave animation enhancement */
+.footer-wave {
+    opacity: 0.7;
+    filter: blur(1px);
+}

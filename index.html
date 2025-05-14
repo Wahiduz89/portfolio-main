@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="framer-animations.css">
     <link rel="stylesheet" href="modern-effects.css">
     <link rel="stylesheet" href="about-section-effects.css">
+    <link rel="stylesheet" href="contact-animations.css">
+    <link rel="stylesheet" href="contact-bg-animation.css">
     <style>
         .active-link {
             color: #3B82F6 !important;
@@ -368,12 +370,12 @@ dark:border dark:border-white/50 dark:bg-transparent">
 </div>
 
     <!-- ----- contact -------------  -->
-    <div id="contact" class="w-full px-[12%] py-10 scroll-mt-20 bg-[url('./images/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center
- dark:bg-none">
+    <div id="contact" class="w-full px-[12%] py-20 scroll-mt-20 parallax-container bg-[url('./images/contact-bg.png')] bg-no-repeat bg-cover bg-center
+ dark:bg-none contact-form-container animate-ready">
 
-        <h4 class="text-center mb-2 text-lg font-Ovo">Connect with me</h4>
-        <h2 class="text-center text-5xl font-Ovo">Get in touch</h2>
-        <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">I'd love to hear from you! If you have any
+        <h4 class="text-center mb-2 text-lg font-Ovo form-element animate-ready">Connect with me</h4>
+        <h2 class="text-center text-5xl font-Ovo form-element animate-ready">Get in touch</h2>
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo form-element animate-ready">I'd love to hear from you! If you have any
             questions, comments or feedback, please use the form below.</p>
 
         <form method="POST" action="https://api.web3forms.com/submit" class="max-w-2xl mx-auto">
@@ -384,15 +386,15 @@ dark:border dark:border-white/50 dark:bg-transparent">
 
             <div class="grid grid-cols-auto gap-6 mt-10 mb-8">
                 <input type="text" placeholder="Enter your name"
-                    class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90"
+                    class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90 form-element animate-ready"
                     required name="name">
 
                 <input type="email" placeholder="Enter your email"
-                    class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90"
+                    class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90 form-element animate-ready"
                     required name="email">
             </div>
             <textarea rows="6" placeholder="Enter your message"
-                class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90"
+                class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90 form-element animate-ready"
                 required name="message"></textarea>
 
             <div class="flex justify-center w-full pb-5">
@@ -405,7 +407,7 @@ dark:border dark:border-white/50 dark:bg-transparent">
 
             <div class="flex justify-center w-full">
                 <button
-                    class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-indigo-500 text-white rounded-full mx-auto transition duration-300 hover:scale-105 hover:bg-indigo-600 dark:bg-indigo-700 dark:hover:bg-indigo-800">
+                    class="py-3 px-8 w-max flex items-center justify-between gap-2 bg-indigo-500 text-white rounded-full mx-auto transition duration-300 hover:scale-105 hover:bg-indigo-600 dark:bg-indigo-700 dark:hover:bg-indigo-800 submit-btn form-element animate-ready">
                     Submit now
                     <img src="./images/right-arrow-white.png" alt="" class="w-4">
                 </button>
@@ -413,22 +415,24 @@ dark:border dark:border-white/50 dark:bg-transparent">
         </form>
     </div>
     <!-- ----------- footer ---------  -->
-    <div class="mt-20">
+    <div class="mt-20 footer-container">
+        <div class="footer-wave"></div>
         <div class="text-center">
 
 
-            <div class="w-max flex items-center gap-2 mx-auto">
-                <img src="./images/mail_icon.png" alt="" class="w-6 dark:hidden">
-                <img src="./images/mail_icon_dark.png" alt="" class="w-6 hidden dark:block">
-
-                zwahiduz89@gmail.com
+            <div class="w-max flex items-center gap-2 mx-auto email-container animate-ready">
+                <img src="./images/mail_icon.png" alt="" class="w-6 dark:hidden social-icon">
+                <img src="./images/mail_icon_dark.png" alt="" class="w-6 hidden dark:block social-icon">
+                <span>zwahiduz89@gmail.com</span>
             </div>
         </div>
         <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
-            <p>© 2025 Wahiduz zaman. All rights reserved.</p>
-            <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
-                <li><a target="_blank" href="https://github.com/zaman-mallik">GitHub</a></li>
-            </ul>
+            <p class="copyright-text animate-ready">© 2025 Wahiduz zaman. All rights reserved.</p>
+            <div class="flex items-center justify-center mt-4 sm:mt-0">
+                <a target="_blank" href="https://github.com/zaman-mallik" class="footer-link github-link transition-all duration-300 hover:scale-110">
+                    <i class="fab fa-github social-icon text-xl"></i>
+                </a>
+            </div>
         </div>
     </div>
 
@@ -439,6 +443,7 @@ dark:border dark:border-white/50 dark:bg-transparent">
     <script src="parallax.js"></script>
     <script src="smooth-scroll.js"></script>
     <script src="cursor-animation.js"></script>
+    <script src="contact-animations.js"></script>
     <!-- Scroll progress indicator -->
     <div class="scroll-progress"></div>
     
@@ -455,6 +460,16 @@ dark:border dark:border-white/50 dark:bg-transparent">
                 if (element.getBoundingClientRect().top <= window.innerHeight * 0.8) {
                     element.classList.add('animate-in');
                 }
+            });
+            
+            // Add scroll event listener to animate elements when they come into view
+            window.addEventListener('scroll', function() {
+                const elements = document.querySelectorAll('.animate-ready:not(.animate-in)');
+                elements.forEach(element => {
+                    if (element.getBoundingClientRect().top <= window.innerHeight * 0.8) {
+                        element.classList.add('animate-in');
+                    }
+                });
             });
         });
     </script>
