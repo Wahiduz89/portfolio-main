@@ -27,6 +27,11 @@
         }
         
         /* Custom cursor styles */
+        .cursor-inner, .cursor-outer {
+            display: none; /* Hide custom cursor completely */
+        }
+        
+        /* The rest of the cursor styles can remain but won't be used */
         .cursor-inner {
             position: fixed;
             width: 8px;
@@ -63,7 +68,7 @@
             border-color: rgba(59, 130, 246, 0.3);
         }
         
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
             .cursor-inner, .cursor-outer {
                 display: none;
             }
@@ -211,7 +216,7 @@ dark:border dark:border-white/50 dark:bg-transparent">
 
 
                         <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Projects</h3>
-                        <p class="text-gray-600 text-sm dark:text-white/80">Built 4 projects </p>
+                        <p class="text-gray-600 text-sm dark:text-white/80">Built 8 projects </p>
                     </li>
                 </ul>
                 <h4 class="my-6 text-gray-700 font-Ovo dark:text-white/80">Tools i use</h4>
@@ -427,19 +432,12 @@ dark:border dark:border-white/50 dark:bg-transparent">
             </div>
         </div>
         <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
-<<<<<<< HEAD
             <p class="copyright-text animate-ready">© 2025 Wahiduz zaman. All rights reserved.</p>
             <div class="flex items-center justify-center mt-4 sm:mt-0">
-                <a target="_blank" href="https://github.com/zaman-mallik" class="footer-link github-link transition-all duration-300 hover:scale-110">
+                <a target="_blank" href="https://github.com/Wahiduz89" class="footer-link github-link transition-all duration-300 hover:scale-110">
                     <i class="fab fa-github social-icon text-xl"></i>
                 </a>
             </div>
-=======
-            <p>© 2025 Wahiduz zaman. All rights reserved.</p>
-            <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
-                <li><a target="_blank" href="https://github.com/Wahiduz89">GitHub</a></li>
-            </ul>
->>>>>>> 3b11c4979478b79a601a45b38974660c1d8b9ac6
         </div>
     </div>
 
@@ -449,7 +447,7 @@ dark:border dark:border-white/50 dark:bg-transparent">
     <script src="framer-animations.js"></script>
     <script src="parallax.js"></script>
     <script src="smooth-scroll.js"></script>
-    <script src="cursor-animation.js"></script>
+    <!-- <script src="cursor-animation.js"></script> --> <!-- Disabled custom cursor animation -->
     <script src="contact-animations.js"></script>
     <!-- Scroll progress indicator -->
     <div class="scroll-progress"></div>
