@@ -25,12 +25,14 @@
             font-weight: 600;
             transform: scale(1.05);
         }
-        
+
         /* Custom cursor styles */
-        .cursor-inner, .cursor-outer {
-            display: none; /* Hide custom cursor completely */
+        .cursor-inner,
+        .cursor-outer {
+            display: none;
+            /* Hide custom cursor completely */
         }
-        
+
         /* The rest of the cursor styles can remain but won't be used */
         .cursor-inner {
             position: fixed;
@@ -43,7 +45,7 @@
             transform: translate(-50%, -50%);
             transition: width 0.2s, height 0.2s, background-color 0.2s;
         }
-        
+
         .cursor-outer {
             position: fixed;
             width: 40px;
@@ -55,21 +57,23 @@
             transform: translate(-50%, -50%);
             transition: width 0.2s, height 0.2s, border-color 0.2s;
         }
-        
+
         .cursor-inner.cursor-hover {
             width: 16px;
             height: 16px;
             background-color: rgba(59, 130, 246, 0.8);
         }
-        
+
         .cursor-outer.cursor-hover {
             width: 50px;
             height: 50px;
             border-color: rgba(59, 130, 246, 0.3);
         }
-        
+
         @media (max-width: 1024px) {
-            .cursor-inner, .cursor-outer {
+
+            .cursor-inner,
+            .cursor-outer {
                 display: none;
             }
         }
@@ -84,25 +88,36 @@
     </div>
 
 
-    <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 transition-all duration-300">
+    <nav
+        class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 transition-all duration-300">
         <a href="#top" class="cursor-pointer">
             <img src="images/gamekkk.png" alt="Logo" id="logo" class="w-28 mr-14 dark:hidden">
             <img src="images/gamekkk.png" alt="Logo" id="logo-dark" class="w-28 mr-14 hidden dark:block">
         </a>
-       
-       
 
 
 
-  <!-- Desktop navigation -->
-<ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo glass-effect
+
+
+        <!-- Desktop navigation -->
+        <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo glass-effect
 dark:border dark:border-white/50 dark:bg-transparent">
-    <li><a href="#top" class="transition-transform duration-300 hover:scale-105 hover:text-blue-600 dark:hover:text-blue-400">Home</a></li>
-    <li><a href="#about" class="transition-transform duration-300 hover:scale-105 hover:text-blue-600 dark:hover:text-blue-400">About me</a></li>
-    <li><a href="#services" class="transition-transform duration-300 hover:scale-105 hover:text-blue-600 dark:hover:text-blue-400">Services</a></li>
-    <li><a href="#work" class="transition-transform duration-300 hover:scale-105 hover:text-blue-600 dark:hover:text-blue-400">Projects</a></li>
-    <li><a href="#contact" class="transition-transform duration-300 hover:scale-105 hover:text-blue-600 dark:hover:text-blue-400">Contact me</a></li>
-</ul>
+            <li><a href="#top"
+                    class="transition-transform duration-300 hover:scale-105 hover:text-blue-600 dark:hover:text-blue-400">Home</a>
+            </li>
+            <li><a href="#about"
+                    class="transition-transform duration-300 hover:scale-105 hover:text-blue-600 dark:hover:text-blue-400">About
+                    me</a></li>
+            <li><a href="#services"
+                    class="transition-transform duration-300 hover:scale-105 hover:text-blue-600 dark:hover:text-blue-400">Services</a>
+            </li>
+            <li><a href="#work"
+                    class="transition-transform duration-300 hover:scale-105 hover:text-blue-600 dark:hover:text-blue-400">Projects</a>
+            </li>
+            <li><a href="#contact"
+                    class="transition-transform duration-300 hover:scale-105 hover:text-blue-600 dark:hover:text-blue-400">Contact
+                    me</a></li>
+        </ul>
 
 
         <div class="flex items-center gap-4">
@@ -123,21 +138,33 @@ dark:border dark:border-white/50 dark:bg-transparent">
             </button>
 
         </div>
-  
-<!-- Mobile navigation -->
-<ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 font-Ovo dark:bg-darkHover dark:text-white">
-    <li><a href="#top" onclick="closeMenu()" class="transition-transform duration-300 hover:scale-105 hover:text-blue-600 dark:hover:text-blue-400 inline-block">Home</a></li>
-    <li><a href="#about" onclick="closeMenu()" class="transition-transform duration-300 hover:scale-105 hover:text-blue-600 dark:hover:text-blue-400 inline-block">About me</a></li>
-    <li><a href="#services" onclick="closeMenu()" class="transition-transform duration-300 hover:scale-105 hover:text-blue-600 dark:hover:text-blue-400 inline-block">Services</a></li>
-    <li><a href="#work" onclick="closeMenu()" class="transition-transform duration-300 hover:scale-105 hover:text-blue-600 dark:hover:text-blue-400 inline-block">Projects</a></li>
-    <li><a href="#contact" onclick="closeMenu()" class="transition-transform duration-300 hover:scale-105 hover:text-blue-600 dark:hover:text-blue-400 inline-block">Contact me</a></li>
-</ul>
+
+        <!-- Mobile navigation -->
+        <ul id="sideMenu"
+            class="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 font-Ovo dark:bg-darkHover dark:text-white">
+            <li><a href="#top" onclick="closeMenu()"
+                    class="transition-transform duration-300 hover:scale-105 hover:text-blue-600 dark:hover:text-blue-400 inline-block">Home</a>
+            </li>
+            <li><a href="#about" onclick="closeMenu()"
+                    class="transition-transform duration-300 hover:scale-105 hover:text-blue-600 dark:hover:text-blue-400 inline-block">About
+                    me</a></li>
+            <li><a href="#services" onclick="closeMenu()"
+                    class="transition-transform duration-300 hover:scale-105 hover:text-blue-600 dark:hover:text-blue-400 inline-block">Services</a>
+            </li>
+            <li><a href="#work" onclick="closeMenu()"
+                    class="transition-transform duration-300 hover:scale-105 hover:text-blue-600 dark:hover:text-blue-400 inline-block">Projects</a>
+            </li>
+            <li><a href="#contact" onclick="closeMenu()"
+                    class="transition-transform duration-300 hover:scale-105 hover:text-blue-600 dark:hover:text-blue-400 inline-block">Contact
+                    me</a></li>
+        </ul>
 
     </nav>
 
     <!-- ------ header --------------  -->
 
-    <div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 parallax-container">
+    <div
+        class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 parallax-container">
         <img src="images/personal image.jpg" alt="" class="rounded-full w-32">
         <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3 font-Ovo">
             Hi! I'm Wahiduz Zaman <img src="./images/hand-icon.png" alt="" class="w-6">
@@ -164,21 +191,15 @@ dark:border dark:border-white/50 dark:bg-transparent">
         <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
             <div class="max-w-max mx-auto relative float profile-image-container">
                 <img src="images/personal image.jpg" alt="" class="w-64 sm:w-80 rounded-3xl max-w-none">
-
-                <div
-                    class="bg-white w-1/2 aspect-square absolute right-0 bottom-0 rounded-full translate-x-1/4 translate-y-1/3 shadow-[0_4px_55px_rgba(149,0,162,0.15)] flex items-center justify-center">
-                    <img src="./images/circular-text.png" alt="" class="w-full animate-spin_slow">
-                    <img src="./images/dev-icon.png" alt=""
-                        class="w-1/4 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                </div>
             </div>
             <div class="flex-1">
-                <p class="mb-10 max-w-2xl font-Ovo">Motivated and skilled <span class="highlight-text">Full Stack Developer</span> with a strong foundation
-                    in web development technologies and hands-on project experience. Proficient in both front-end and
-                    back-end development, with expertise in <span class="highlight-text">JavaScript, React, Node.js</span>, and modern web development
-                    frameworks. Demonstrated ability to create responsive, efficient, and user-friendly web applications
-                    through academic projects and personal learning. Eager to leverage technical skills and passion for
-                    innovative problem-solving in a dynamic development environment.
+                <p class="mb-10 max-w-2xl font-Ovo">Full Stack Developer with 2 years of experience designing,
+                    developing, and deploying scalable web applications. Proficient in
+                    end-to-end development with expertise in 𝐑𝐞𝐚𝐜𝐭, 𝐍𝐨𝐝𝐞.𝐣𝐬,
+                    𝐍𝐞𝐱𝐭.𝐣𝐬, 𝐉𝐚𝐯𝐚𝐒𝐜𝐫𝐢𝐩𝐭 𝐚𝐧𝐝 𝐜𝐥𝐨𝐮𝐝 𝐩𝐥𝐚𝐭𝐟𝐨𝐫𝐦 𝐀𝐖𝐒 . Adept at
+                    collaborating with cross-functional teams to deliver high-impact
+                    solutions. Strong problem-solving skills with a focus on clean
+                    code, performance optimization, and Agile/Scrum methodologies
 
 
 
@@ -192,9 +213,10 @@ dark:border dark:border-white/50 dark:bg-transparent">
                         <img src="./images/code-icon-dark.png" alt="" class="w-7 mt-3 hidden dark:block">
 
                         <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Languages</h3>
-                        <p class="text-gray-600 text-sm dark:text-white/80">HTML , CSS, React <br> JavaScript , React
-                            <br>
-                            Node.js, Expess.js <br> Next.js </p>
+                        <p class="text-gray-600 text-sm dark:text-white/80">HTML , CSS, React, <br> JavaScript ,
+        
+                            Node.js, Expess.js, Next.js
+                        </p>
 
 
                     </li>
@@ -207,8 +229,7 @@ dark:border dark:border-white/50 dark:bg-transparent">
                         <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Education</h3>
                         <p class="text-gray-600 text-sm dark:text-white/80">Bachelor of Computer Application</p>
                     </li>
-                    <li
-                        onclick="document.getElementById('work').scrollIntoView({behavior: 'smooth'})"
+                    <li onclick="document.getElementById('work').scrollIntoView({behavior: 'smooth'})"
                         class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:border-white dark:hover:shadow-white dark:hover:bg-darkHover/50">
 
                         <img src="./images/project-icon.png" alt="" class="w-7 mt-3 dark:hidden">
@@ -216,7 +237,7 @@ dark:border dark:border-white/50 dark:bg-transparent">
 
 
                         <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Projects</h3>
-                        <p class="text-gray-600 text-sm dark:text-white/80">Built 8 projects </p>
+                        <p class="text-gray-600 text-sm dark:text-white/80">Built 10+ Projects </p>
                     </li>
                 </ul>
                 <h4 class="my-6 text-gray-700 font-Ovo dark:text-white/80">Tools i use</h4>
@@ -291,88 +312,92 @@ dark:border dark:border-white/50 dark:bg-transparent">
             </div>
         </div>
     </div>
-<!-- ------------ my work ------------  -->
+    <!-- ------------ my work ------------  -->
 
-<div id="work" class="w-full px-[12%] py-20 scroll-mt-20 parallax-container">
-    <h4 class="text-center mb-2 text-lg font-Ovo">My portfolio</h4>
-    <h2 class="text-center text-5xl font-Ovo">My latest work</h2>
-    <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">Welcome to my web development portfolio! Explore a
-        collection of projects showcasing my expertise in full-stack development.</p>
+    <div id="work" class="w-full px-[12%] py-20 scroll-mt-20 parallax-container">
+        <h4 class="text-center mb-2 text-lg font-Ovo">My portfolio</h4>
+        <h2 class="text-center text-5xl font-Ovo">My latest work</h2>
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo">Welcome to my web development portfolio! Explore a
+            collection of projects showcasing my expertise in full-stack development.</p>
 
-    <div class="grid grid-cols-auto my-10 gap-5 dark:text-black">
-        <!-- Project 1 - Clickwell -->
-        <div class="aspect-square bg-[url('images/CLICKWELL.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group block overflow-hidden transition-transform duration-500 hover:scale-105">
+        <div class="grid grid-cols-auto my-10 gap-5 dark:text-black">
+            <!-- Project 1 - Clickwell -->
             <div
-                class="bg-sky-300 w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
-                <h2 class="font-semibold dark:text-blue-700">Clickwell {MERN}</h2>
-                <div class="flex items-center gap-2">
-                    <a href="https://github.com/Wahiduz89/clickwell" target="_blank" 
-                        class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
-                        <img src="./images/github-30.png" alt="GitHub Repository" class="w-5">
-                    </a>
-                    <a href="https://clickwell.vercel.app" target="_blank"
-                        class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
-                        <img src="./images/send-icon.png" alt="Live Site" class="w-5">
-                    </a>
+                class="aspect-square bg-[url('images/CLICKWELL.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group block overflow-hidden transition-transform duration-500 hover:scale-105">
+                <div
+                    class="bg-sky-300 w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                    <h2 class="font-semibold dark:text-blue-700">Clickwell {MERN}</h2>
+                    <div class="flex items-center gap-2">
+                        <a href="https://github.com/Wahiduz89/clickwell" target="_blank"
+                            class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                            <img src="./images/github-30.png" alt="GitHub Repository" class="w-5">
+                        </a>
+                        <a href="https://clickwell.vercel.app" target="_blank"
+                            class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                            <img src="./images/send-icon.png" alt="Live Site" class="w-5">
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Project 2 - Prescripto -->
-        <div class="aspect-square bg-[url('images/PRESCRIPTO.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group block overflow-hidden transition-transform duration-500 hover:scale-105">
+            <!-- Project 2 - Prescripto -->
             <div
-                class="bg-sky-300 w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
-                <h2 class="font-semibold dark:text-blue-700">Prescripto {MERN}</h2>
-                <div class="flex items-center gap-2">
-                    <a href="https://github.com/Wahiduz89/prescripto-project" target="_blank" 
-                        class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
-                        <img src="./images/github-30.png" alt="GitHub Repository" class="w-5">
-                    </a>
-                    <a href="https://prescripto-project-frontendpro.vercel.app" target="_blank"
-                        class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
-                        <img src="./images/send-icon.png" alt="Live Site" class="w-5">
-                    </a>
+                class="aspect-square bg-[url('images/PRESCRIPTO.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group block overflow-hidden transition-transform duration-500 hover:scale-105">
+                <div
+                    class="bg-sky-300 w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                    <h2 class="font-semibold dark:text-blue-700">Prescripto {MERN}</h2>
+                    <div class="flex items-center gap-2">
+                        <a href="https://github.com/Wahiduz89/prescripto-project" target="_blank"
+                            class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                            <img src="./images/github-30.png" alt="GitHub Repository" class="w-5">
+                        </a>
+                        <a href="https://prescripto-project-frontendpro.vercel.app" target="_blank"
+                            class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                            <img src="./images/send-icon.png" alt="Live Site" class="w-5">
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Project 3 - Imagify AI -->
-        <div class="aspect-square bg-[url('images/imagify.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group block overflow-hidden transition-transform duration-500 hover:scale-105">
+            <!-- Project 3 - Imagify AI -->
             <div
-                class="bg-sky-300 w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
-                <h2 class="font-semibold dark:text-blue-700">Imagify AI {MERN}</h2>
-                <div class="flex items-center gap-2">
-                    <a href="https://github.com/Wahiduz89/imagify" target="_blank" 
-                        class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
-                        <img src="./images/github-30.png" alt="GitHub Repository" class="w-5">
-                    </a>
-                    <a href="https://imagify-0x79.onrender.com" target="_blank"
-                        class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
-                        <img src="./images/send-icon.png" alt="Live Site" class="w-5">
-                    </a>
+                class="aspect-square bg-[url('images/imagify.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group block overflow-hidden transition-transform duration-500 hover:scale-105">
+                <div
+                    class="bg-sky-300 w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                    <h2 class="font-semibold dark:text-blue-700">Imagify AI {MERN}</h2>
+                    <div class="flex items-center gap-2">
+                        <a href="https://github.com/Wahiduz89/imagify" target="_blank"
+                            class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                            <img src="./images/github-30.png" alt="GitHub Repository" class="w-5">
+                        </a>
+                        <a href="https://imagify-0x79.onrender.com" target="_blank"
+                            class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                            <img src="./images/send-icon.png" alt="Live Site" class="w-5">
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Project 4 - Tripi -->
-        <div class="aspect-square bg-[url('images/Screens.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group block overflow-hidden transition-transform duration-500 hover:scale-105">
+            <!-- Project 4 - Tripi -->
             <div
-                class="bg-sky-300 w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
-                <h2 class="font-semibold dark:text-blue-700">Tripi {Next.js}</h2>
-                <div class="flex items-center gap-2">
-                    <a href="https://github.com/Wahiduz89/Tripi" target="_blank" 
-                        class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
-                        <img src="./images/github-30.png" alt="GitHub Repository" class="w-5">
-                    </a>
-                    <a href="https://tripi-o7yzuzroa-wahiduz89s-projects.vercel.app" target="_blank"
-                        class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
-                        <img src="./images/send-icon.png" alt="Live Site" class="w-5">
-                    </a>
+                class="aspect-square bg-[url('images/Screens.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group block overflow-hidden transition-transform duration-500 hover:scale-105">
+                <div
+                    class="bg-sky-300 w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7">
+                    <h2 class="font-semibold dark:text-blue-700">Tripi {Next.js}</h2>
+                    <div class="flex items-center gap-2">
+                        <a href="https://github.com/Wahiduz89/Tripi" target="_blank"
+                            class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                            <img src="./images/github-30.png" alt="GitHub Repository" class="w-5">
+                        </a>
+                        <a href="https://tripi-o7yzuzroa-wahiduz89s-projects.vercel.app" target="_blank"
+                            class="border rounded-full border-black w-9 aspect-square flex items-center justify-center shadow-[2px_2px_0_#000] group-hover:bg-lime-300 transition">
+                            <img src="./images/send-icon.png" alt="Live Site" class="w-5">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
     <!-- ----- contact -------------  -->
     <div id="contact" class="w-full px-[12%] py-20 scroll-mt-20 parallax-container bg-[url('./images/contact-bg.png')] bg-no-repeat bg-cover bg-center
@@ -380,7 +405,8 @@ dark:border dark:border-white/50 dark:bg-transparent">
 
         <h4 class="text-center mb-2 text-lg font-Ovo form-element animate-ready">Connect with me</h4>
         <h2 class="text-center text-5xl font-Ovo form-element animate-ready">Get in touch</h2>
-        <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo form-element animate-ready">I'd love to hear from you! If you have any
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-12 font-Ovo form-element animate-ready">I'd love to hear from
+            you! If you have any
             questions, comments or feedback, please use the form below.</p>
 
         <form method="POST" action="https://api.web3forms.com/submit" class="max-w-2xl mx-auto">
@@ -431,15 +457,16 @@ dark:border dark:border-white/50 dark:bg-transparent">
                 <span>zwahiduz89@gmail.com</span>
             </div>
         </div>
+    </div>
+    <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
+        <p class="copyright-text animate-ready">© 2025 Wahiduz zaman. All rights reserved.</p>
+        <div class="flex items-center justify-center mt-4 sm:mt-0">
+            <a target="_blank" href="https://github.com/Wahiduz89"
+                class="footer-link github-link transition-all duration-300 hover:scale-110">
+                <i class="fab fa-github social-icon text-xl"></i>
+            </a>
         </div>
-        <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6">
-            <p class="copyright-text animate-ready">© 2025 Wahiduz zaman. All rights reserved.</p>
-            <div class="flex items-center justify-center mt-4 sm:mt-0">
-                <a target="_blank" href="https://github.com/Wahiduz89" class="footer-link github-link transition-all duration-300 hover:scale-110">
-                    <i class="fab fa-github social-icon text-xl"></i>
-                </a>
-            </div>
-        </div>
+    </div>
     </div>
 
     <script src="https://web3forms.com/client/script.js" async defer></script>
@@ -451,14 +478,14 @@ dark:border dark:border-white/50 dark:bg-transparent">
     <script src="contact-animations.js"></script>
     <!-- Scroll progress indicator -->
     <div class="scroll-progress"></div>
-    
+
     <!-- JavaScript files -->
     <script src="script.js"></script>
     <script src="advanced-animations.js"></script>
     <script src="scroll-progress.js"></script>
     <script>
         // Initialize animations when DOM is loaded
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Trigger animations for elements already in viewport
             const elements = document.querySelectorAll('.animate-ready');
             elements.forEach(element => {
@@ -466,9 +493,9 @@ dark:border dark:border-white/50 dark:bg-transparent">
                     element.classList.add('animate-in');
                 }
             });
-            
+
             // Add scroll event listener to animate elements when they come into view
-            window.addEventListener('scroll', function() {
+            window.addEventListener('scroll', function () {
                 const elements = document.querySelectorAll('.animate-ready:not(.animate-in)');
                 elements.forEach(element => {
                     if (element.getBoundingClientRect().top <= window.innerHeight * 0.8) {
